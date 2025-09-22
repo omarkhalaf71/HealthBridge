@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaCare - Pharmacy Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-mortar-pestle"></i>
+                <span>PharmaCare</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#" class="active"
+                        ><i class="fas fa-home"></i> <span>Dashboard</span></a
+                    >
+                </li>
+                <li>
+                    <a href="#"
+                        ><i class="fas fa-prescription"></i> <span>Prescriptions</span></a
+                    >
+                </li>
+                <li>
+                    <a href="#"
+                        ><i class="fas fa-capsules"></i> <span>Order Processing</span></a
+                    >
+                </li>
+                <li>
+                    <a href="#"
+                        ><i class="fas fa-truck"></i> <span>Delivery Management</span></a
+                    >
+                </li>
+                <li>
+                    <a href="#"
+                        ><i class="fas fa-pills"></i>
+                        <span>Inventory & Medications</span></a
+                    >
+                </li>
+                <li>
+                    <a href="#"
+                        ><i class="fas fa-map-marker-alt"></i>
+                        <span>Order Tracking</span></a
+                    >
+                </li>
+                <li>
+                    <a href="#"
+                        ><i class="fas fa-cog"></i> <span>Pharmacy Settings</span></a
+                    >
+                </li>
+                <li>
+                    <a href="#"
+                        ><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a
+                    >
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="search-box">
+                    <input type="text" class="form-control" placeholder="Search..." />
+                </div>
+                <div class="header-right">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">3</span>
+                    </div>
+                    <div class="user-info">
+                        <img
+                            src="https://ui-avatars.com/api/?name=Pharmacy+User&background=3498db&color=fff"
+                            alt="User"
+                        />
+                        <div>
+                            <div>Pharmacy User</div>
+                            <small>Pharmacy Manager</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <h1 style="margin-bottom: 20px">Pharmacy Dashboard</h1>
+
+                <!-- Quick Stats -->
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div
+                            class="stat-icon"
+                            style="background: #e3f2fd; color: var(--color-primary)"
+                        >
+                            <i class="fas fa-prescription"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>15</h3>
+                            <p>Prescriptions Today</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div
+                            class="stat-icon"
+                            style="background: #e8f5e9; color: var(--color-success)"
+                        >
+                            <i class="fas fa-capsules"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>8</h3>
+                            <p>Orders Processing</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div
+                            class="stat-icon"
+                            style="background: #ffecb3; color: var(--color-warning)"
+                        >
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>5</h3>
+                            <p>Ready for Delivery</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div
+                            class="stat-icon"
+                            style="background: #ffcdd2; color: var(--color-danger)"
+                        >
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>$1,250</h3>
+                            <p>Total Revenue</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent prescriptions -->
+                <div class="section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-file-medical"></i> Recent Prescriptions</h2>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-list"></i> View All
+                        </button>
+                    </div>
+                    <div class="section-body">
+                        <!-- Filters -->
+                        <div class="filters">
+                            <div class="filter-group">
+                                <label>Status</label>
+                                <select class="filter-select" id="statusFilter">
+                                    <option value="all">All Statuses</option>
+                                    <option value="pending">Pending Review</option>
+                                    <option value="processing">Processing</option>
+                                    <option value="ready">Ready for Delivery</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Date</label>
+                                <input type="date" class="filter-input" id="dateFilter" />
+                            </div>
+                            <div class="filter-group">
+                                <label>Search</label>
+                                <div class="search-box">
+                                    <input
+                                        type="text"
+                                        class="search-input"
+                                        id="prescriptionSearch"
+                                        placeholder="Search prescriptions..."
+                                    />
+                                    <button class="search-btn">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table id="prescriptionsTable">
+                                <thead>
+                                    <tr>
+                                        <th data-sort="id">
+                                            Rx Number <i class="fas fa-sort"></i>
+                                        </th>
+                                        <th data-sort="hospital">
+                                            Hospital <i class="fas fa-sort"></i>
+                                        </th>
+                                        <th data-sort="doctor">
+                                            Doctor <i class="fas fa-sort"></i>
+                                        </th>
+                                        <th data-sort="patient">
+                                            Patient <i class="fas fa-sort"></i>
+                                        </th>
+                                        <th data-sort="date">Date <i class="fas fa-sort"></i></th>
+                                        <th data-sort="status">
+                                            Status <i class="fas fa-sort"></i>
+                                        </th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#RX-1025</td>
+                                        <td>King Faisal Hospital</td>
+                                        <td>Dr. Ahmed Al-Saadi</td>
+                                        <td>Mohammed Al-Otaibi</td>
+                                        <td>03/15/2023</td>
+                                        <td>
+                                            <span class="status status-pending"
+                                                >Pending Review</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm">
+                                                <i class="fas fa-eye"></i> View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#RX-1024</td>
+                                        <td>Specialized Medical Center</td>
+                                        <td>Dr. Sara Al-Fahad</td>
+                                        <td>Fatima Al-Harbi</td>
+                                        <td>03/15/2023</td>
+                                        <td>
+                                            <span class="status status-processing">Processing</span>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm">
+                                                <i class="fas fa-eye"></i> View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#RX-1023</td>
+                                        <td>Dr. Sulaiman Fakeeh Hospital</td>
+                                        <td>Dr. Khalid Al-Zahrani</td>
+                                        <td>Abdullah Al-Qahtani</td>
+                                        <td>03/14/2023</td>
+                                        <td>
+                                            <span class="status status-ready"
+                                                >Ready for Delivery</span
+                                            >
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm">
+                                                <i class="fas fa-eye"></i> View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orders in processing -->
+                <div class="section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-capsules"></i> Orders in Processing</h2>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-list"></i> View All
+                        </button>
+                    </div>
+                    <div class="section-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Order #</th>
+                                        <th>Patient</th>
+                                        <th>Products</th>
+                                        <th>Order Value</th>
+                                        <th>Received</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#ORD-2058</td>
+                                        <td>Saeed Al-Ghamdi</td>
+                                        <td>3 products</td>
+                                        <td>$120</td>
+                                        <td>30 mins ago</td>
+                                        <td>
+                                            <span class="status status-processing">Processing</span>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-success btn-sm">
+                                                <i class="fas fa-check"></i> Ready
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-2057</td>
+                                        <td>Nora Al-Shahrani</td>
+                                        <td>5 products</td>
+                                        <td>$85</td>
+                                        <td>45 mins ago</td>
+                                        <td>
+                                            <span class="status status-processing">Processing</span>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-success btn-sm">
+                                                <i class="fas fa-check"></i> Ready
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orders ready for delivery -->
+                <div class="section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-truck"></i> Orders Ready for Delivery</h2>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-list"></i> View All
+                        </button>
+                    </div>
+                    <div class="section-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Order #</th>
+                                        <th>Patient</th>
+                                        <th>Address</th>
+                                        <th>Ready Since</th>
+                                        <th>Delivery Method</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#ORD-2056</td>
+                                        <td>Omar Al-Salem</td>
+                                        <td>Al-Salam District, Riyadh</td>
+                                        <td>1 hour ago</td>
+                                        <td>Express Delivery</td>
+                                        <td>
+                                            <button class="btn btn-warning btn-sm">
+                                                <i class="fas fa-truck"></i> Confirm Delivery
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-2055</td>
+                                        <td>Lina Al-Tamimi</td>
+                                        <td>Al-Nakheel District, Riyadh</td>
+                                        <td>2 hours ago</td>
+                                        <td>Standard Delivery</td>
+                                        <td>
+                                            <button class="btn btn-warning btn-sm">
+                                                <i class="fas fa-truck"></i> Confirm Delivery
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+    <script src="./js/main.js"></script>
+    <script src="/assets/JS/main.js"></script>
+    <script>
+        checkAccess("pharmacy");
+    </script>
+</body>
+</html>

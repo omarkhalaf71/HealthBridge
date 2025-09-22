@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Healthcare System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <button class="sidebar-toggle" id="sidebarToggle">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <i class="fas fa-hospital"></i>
+        <span>Admin Panel</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="active"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-users"></i> <span>User Management</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-hospital-user"></i> <span>Hospitals</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-clinic-medical"></i> <span>Pharmacies</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-prescription"></i> <span>Prescriptions</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-chart-line"></i> <span>Analytics</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-cog"></i> <span>System Settings</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <div class="search-box">
+          <input type="text" class="form-control" placeholder="Search..." />
+        </div>
+        <div class="header-right">
+          <div class="notification-bell">
+            <i class="fas fa-bell"></i>
+            <span class="notification-count">5</span>
+          </div>
+          <div class="user-info">
+            <img src="https://ui-avatars.com/api/?name=Admin+User&background=3498db&color=fff" alt="User" />
+            <div>
+              <div>Admin User</div>
+              <small>System Administrator</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div class="page-content">
+        <h1 style="margin-bottom: 20px">Admin Dashboard</h1>
+
+        <!-- Quick Stats -->
+        <div class="stats-cards">
+          <div class="stat-card">
+            <div class="stat-icon" style="background: #e3f2fd; color: var(--color-primary)">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-info">
+              <h3>1,258</h3>
+              <p>Total Users</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background: #e8f5e9; color: var(--color-success)">
+              <i class="fas fa-hospital"></i>
+            </div>
+            <div class="stat-info">
+              <h3>42</h3>
+              <p>Hospitals</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background: #ffecb3; color: var(--color-warning)">
+              <i class="fas fa-clinic-medical"></i>
+            </div>
+            <div class="stat-info">
+              <h3>78</h3>
+              <p>Pharmacies</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background: #ffcdd2; color: var(--color-danger)">
+              <i class="fas fa-prescription"></i>
+            </div>
+            <div class="stat-info">
+              <h3>356</h3>
+              <p>Prescriptions Today</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activities -->
+        <div class="section" id="pendingRequestsBody">
+          <div class="section-header">
+            <h2><i class="fas fa-history"></i> Recent Activities</h2>
+            <button class="btn btn-primary">
+              <i class="fas fa-list"></i> View All
+            </button>
+          </div>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>Action</th>
+                    <th>Target</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dr. Ahmed</td>
+                    <td>Created prescription</td>
+                    <td>Patient: Mohammed</td>
+                    <td>10:30 AM</td>
+                    <td>
+                      <span class="status status-success">Success</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>PharmaCare Admin</td>
+                    <td>Updated inventory</td>
+                    <td>Medication: Amoxicillin</td>
+                    <td>09:45 AM</td>
+                    <td>
+                      <span class="status status-success">Success</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>King Faisal Hospital</td>
+                    <td>Added new doctor</td>
+                    <td>Dr. Sara Al-Fahad</td>
+                    <td>09:15 AM</td>
+                    <td>
+                      <span class="status status-pending">Pending</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>System</td>
+                    <td>Automatic backup</td>
+                    <td>Database</td>
+                    <td>08:00 AM</td>
+                    <td>
+                      <span class="status status-success">Success</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pending Registration Requests -->
+        <div class="section requests-section">
+          <div class="section-header">
+            <h2><i class="fas fa-clock"></i> Pending Registration Requests</h2>
+            <button class="btn btn-primary" onclick="adminManager.refreshRequests()">
+              <i class="fas fa-sync-alt"></i> Refresh
+            </button>
+          </div>
+          <div class="section-body">
+            <div id="requests-container">
+              <!-- الطلبات سيتم عرضها هنا -->
+            </div>
+          </div>
+        </div>
+
+        <!-- System Health -->
+        <div class="section">
+          <div class="section-header">
+            <h2><i class="fas fa-heartbeat"></i> System Health</h2>
+            <button class="btn btn-primary">
+              <i class="fas fa-sync-alt"></i> Refresh
+            </button>
+          </div>
+          <div class="section-body">
+            <div class="stats-cards">
+              <div class="stat-card">
+                <div class="stat-icon" style="background: #e8f5e9; color: var(--color-success)">
+                  <i class="fas fa-server"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>99.9%</h3>
+                  <p>Uptime</p>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon" style="background: #e8f5e9; color: var(--color-success)">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>64%</h3>
+                  <p>Database Usage</p>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon" style="background: #fff3cd; color: var(--color-warning)">
+                  <i class="fas fa-hdd"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>78%</h3>
+                  <p>Storage Usage</p>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon" style="background: #e8f5e9; color: var(--color-success)">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="stat-info">
+                  <h3>45 ms</h3>
+                  <p>Avg. Response Time</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pending Approvals -->
+        <div class="section">
+          <div class="section-header">
+            <h2><i class="fas fa-clock"></i> Pending Approvals</h2>
+            <button class="btn btn-primary">
+              <i class="fas fa-list"></i> View All
+            </button>
+          </div>
+          <div class="section-body">
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Requested By</th>
+                    <th>Type</th>
+                    <th>Details</th>
+                    <th>Requested On</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>MediQuick Pharmacy</td>
+                    <td>New Pharmacy Registration</td>
+                    <td>Riyadh Branch</td>
+                    <td>03/14/2023</td>
+                    <td>
+                      <button class="btn btn-success btn-sm" onclick="openPopup()">
+                        <i class="fas fa-check"></i> Approve
+                      </button>
+                      <button class="btn btn-danger btn-sm">
+                        <i class="fas fa-times"></i> Reject
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Dr. Sara Al-Fahad</td>
+                    <td>Doctor Account</td>
+                    <td>Cardiology Specialist</td>
+                    <td>03/14/2023</td>
+                    <td>
+                      <button class="btn btn-success btn-sm" onclick="openPopup()">
+                        <i class="fas fa-check"></i> Approve
+                      </button>
+                      <button class="btn btn-danger btn-sm">
+                        <i class="fas fa-times"></i> Reject
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>King Faisal Hospital</td>
+                    <td>Medication Update</td>
+                    <td>Add new medication to formulary</td>
+                    <td>03/13/2023</td>
+                    <td>
+                      <button class="btn btn-success btn-sm" onclick="openPopup()">
+                        <i class="fas fa-check"></i> Approve
+                      </button>
+                      <button class="btn btn-danger btn-sm">
+                        <i class="fas fa-times"></i> Reject
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="popupOverlay" class="overlay">
+    <div class="popup" style="padding: 40px 90px">
+      <button class="close-btn" onclick="closePopup()">✖</button>
+      <h2>You are Aprroving The Request</h2>
+      <button onclick="deletItem()" style="
+            padding: 20px;
+            background-color: var(--color-success);
+            color: white;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 20px;
+          ">
+        Sure
+      </button>
+      <button onclick="closePopup()" style="
+            cursor: pointer;
+
+            padding: 20px;
+            margin: 10px;
+            background-color: var(--color-danger);
+            color: white;
+            border-radius: 20px;
+          ">
+        Cancel
+      </button>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
+  <script src="/assets/JS/global.js"></script>
+  <script>
+    // checkAccess("admin");
+
+    // const tableBody = document.getElementById("pendingRequestsBody");
+
+  </script>
+  <script src="js/main-admin.js"></script>
+
+</body>
+
+</html>

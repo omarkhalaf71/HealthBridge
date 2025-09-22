@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../assets/CSS/global.css">
+  <link rel="stylesheet" href="../home-Page/assets/CSS/home-page.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <title>HealthBridge - Medical Services</title>
+</head>
+
+<body>
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+<a href=""></a>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="#" class="navbar-logo">
+      <div class="logo-icon">
+        <i class="fas fa-heartbeat"></i>
+      </div>
+      HealthBridge
+    </a>
+
+    <div class="navbar-toggle" id="navbarToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="navbar-menu" id="navbarMenu">
+      <li class="navbar-item">
+        <a href="#home" class="navbar-link active">Home</a>
+      </li>
+      <li class="navbar-item">
+        <a href="../About Us/about.html" class="navbar-link">About</a>
+      </li>
+      <li class="navbar-item">
+        <a href="../services-Page/service.html" class="navbar-link">Services</a>
+      </li>
+      <li class="navbar-item">
+        <a href="../cuntact-Page/contact.html" class="navbar-link">Contact</a>
+      </li>
+
+      <!-- قائمة تسجيل الدخول -->
+      <li class="navbar-item dropdown" id="login-menu">
+        <div class="navbar-link dropdown-toggle">
+          Login <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="dropdown-menu">
+          <div class="dropdown-item">
+            <a href="../login/login-client.html" class="dropdown-link">
+              <i class="fas fa-user"></i>
+              Client
+            </a>
+          </div>
+          <div class="dropdown-item">
+            <a href="../login/login-hospital.html" class="dropdown-link">
+              <i class="fas fa-hospital"></i>
+              Hospital
+            </a>
+          </div>
+          <div class="dropdown-item">
+            <a href="../login/login -pharmacy.html" class="dropdown-link">
+              <i class="fas fa-pills"></i>
+              Pharmacy
+            </a>
+          </div>
+          <div class="dropdown-item">
+            <a href="../login/login-admin.html" class="dropdown-link">
+              <i class="fas fa-user-shield"></i>
+              Admin
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <!-- زر الداشبورد (مخفي مبدئياً) -->
+      <li class="navbar-item" id="dashboard-item" style="display:none;">
+        <a href="#" id="dashboard-link" class="navbar-link">
+          <i class="fas fa-user-circle"></i>
+          Dashboard
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+
+  <!--Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h2>Smarter Healthcare Services <br> Connect to Hospitals & Pharmacies in One Step</h2>
+      <p>Our smart platform connects you directly with hospitals and pharmacies to make healthcare access easier,
+        faster, and more secure.</p>
+      <div class="botn">
+        <button class="btn btn-primary">Get Started</button>
+        <button class="btn btn-outline">Learn More</button>
+      </div>
+    </div>
+    <div class="img">
+      <img src="../home-Page/assets/img/heros.png" alt="Healthcare Illustration">
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+
+  <section class="about-video">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="../home-Page/assets/Free Medical Background HD After Effects.mp4" type="">
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>About US</h2>
+      <p>
+        HealthBridge is a smart healthcare platform designed to simplify your medical journey.
+        Whether booking hospital appointments or ordering medicine online, we ensure a seamless, fast, and secure
+        experience.
+      </p>
+      <button class="btn btn-primary">Discover More</button>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+
+  <!--Why Choose Us -->
+  <section class="why-chose-us">
+    <h3 class="title">Why Choose Us?</h3>
+    <div class="box-container">
+      <div class="box">
+        <img src="../home-Page/assets/img/hospetal.png" alt="">
+        <h4>Direct Hospital Connection</h4>
+        <p>Fast access to appointments & beds</p>
+      </div>
+      <div class="box">
+        <img src="../home-Page/assets/img/farmase.png" alt="">
+        <h4>Pharmacy Integration</h4>
+        <p>Order your medication online easily</p>
+      </div>
+      <div class="box">
+        <img src="../home-Page/assets/img/timer.png" alt="">
+        <h4>Save Time & Effort</h4>
+        <p>Book faster with no hassle</p>
+      </div>
+      <div class="box">
+        <img src="../home-Page/assets/img/secr.png" alt="">
+        <h4>Secure & Reliable</h4>
+        <p>Your medical data is fully protected</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+
+  <!--Call to Action -->
+  <section class="trip">
+    <h2>Start Your Smart Health Journey Today</h2>
+    <button class="btn btn-secondary">Create an Account</button>
+  </section>
+
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+
+  <!--How It Works -->
+  <section class="work">
+    <h2 class="title">How Does It Work?</h2>
+    <div class="box-container">
+      <div class="box">
+        <img src="../home-Page/assets/img/acoont.png" alt="">
+        <h4>Create Your Account</h4>
+        <p>Quick & secure signup</p>
+      </div>
+      <div class="box">
+        <img src="../home-Page/assets/img/serch.png" alt="">
+        <h4>Search for a Service</h4>
+        <p>Find hospitals or medicines easily</p>
+      </div>
+      <div class="box">
+        <img src="../home-Page/assets/img/boking.png" alt="">
+        <h4>Book or Order Instantly</h4>
+        <p>Get instant confirmation</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+
+  <!--Customer Testimonials -->
+  <section class="customers-opinion">
+    <h2>What Our Clients Say</h2>
+    <div class="box-container">
+      <div class="box">
+        <img src="../home-Page/assets/img/sara.png" alt="">
+        <h4>Sarah Ahmed</h4>
+        <p>Saved me a lot of time booking appointments!</p>
+      </div>
+      <div class="box">
+        <img src="../home-Page/assets/img/mohaamd.png" alt="">
+        <h4>Mohamed Ali</h4>
+        <p>First time ordering medicine online this easily.</p>
+      </div>
+      <div class="box">
+        <img src="../home-Page/assets/img/fatma.png" alt="">
+        <h4>Fatma Khalid</h4>
+        <p>Fast, safe and reliable. Highly recommended!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+
+  <!-- FAQ Section -->
+  <section class="questions">
+    <h2>Frequently Asked Questions</h2>
+    <div class="box-container">
+      <div class="box">
+        <p>How can I request a medical service?</p>
+      </div>
+      <div class="box">
+        <p>Is the service available 24/7?</p>
+      </div>
+      <div class="box">
+        <p>How secure is my medical data?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+
+  <!--Contact Section -->
+  <section class="contact">
+    <h2 class="title">Get in Touch</h2>
+    <form class="contact-form" id="myForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button class="btn btn-primary" type="submit" id="send-btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+
+
+  <!-- ---------- footer ---------- -->
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <a href="#" class="footer-logo">
+          <div class="logo-icon">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          HealthBridge
+        </a>
+        <p class="footer-description">
+          Connecting patients with healthcare providers and pharmacies for a seamless healthcare experience.
+        </p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fas fa-arrow-right"></i> Home</a></li>
+          <li><a href="#"><i class="fas fa-arrow-right"></i> Services</a></li>
+          <li><a href="#"><i class="fas fa-arrow-right"></i> About Us</a></li>
+          <li><a href="#"><i class="fas fa-arrow-right"></i> Contact</a></li>
+          <li><a href="#"><i class="fas fa-arrow-right"></i> FAQ</a></li>
+          <li><a href="#"><i class="fas fa-arrow-right"></i> Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-heading">Our Services</h3>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fas fa-arrow-right"></i> Hospital Appointments</a></li>
+          <li><a href="#"><i class="fas fa-arrow-right"></i> Pharmacy Orders</a></li>
+          <li><a href="#"><i class="fas fa-arrow-right"></i> Medical Records</a></li>
+          <li><a href="#"><i class="fas fa-arrow-right"></i> Emergency Services</a></li>
+          <li><a href="#"><i class="fas fa-arrow-right"></i> Health Consultations</a></li>
+          <li><a href="#"><i class="fas fa-arrow-right"></i> Medicine Delivery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-heading">Contact Us</h3>
+        <ul class="contact-info">
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <span>123 Healthcare Street, Medical District, City</span>
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>
+            <span>+1 (123) 456-7890</span>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <span>info@healthbridge.com</span>
+          </li>
+          <li>
+            <i class="fas fa-clock"></i>
+            <span>24/7 Available</span>
+          </li>
+        </ul>
+
+        <h3 class="footer-heading">Download Our App</h3>
+        <div class="app-badges">
+          <a href="#" class="app-badge">
+            <i class="fab fa-apple"></i> App Store
+          </a>
+          <a href="#" class="app-badge">
+            <i class="fab fa-google-play"></i> Play Store
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section" id="footer-news">
+        <h3 class="footer-heading">Newsletter</h3>
+        <p class="footer-description">Subscribe to our newsletter for the latest updates and health tips</p>
+        <form class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+
+        <h3 class="footer-heading">We Accept</h3>
+        <div class="payment-methods">
+          <div class="payment-method">Visa</div>
+          <div class="payment-method">MC</div>
+          <div class="payment-method">PayPal</div>
+          <div class="payment-method">Apple Pay</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; 2023 HealthBridge. All rights reserved.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- -------------------------------------------------------------------------- -->
+
+
+  <div id="popupOverlay" class="overlay">
+    <div class="popup">
+      <button class="close-btn" id="closePopup">✖</button>
+      <h2>Sent ✅</h2>
+      <p>Thanks for contact us </p>
+    </div>
+
+
+
+
+
+
+    <script src="../home-Page/assets/JS/main.js"></script>
+    <!-- <script src="/assets/JS/global.js"></script> -->
+</body>
+
+</html>

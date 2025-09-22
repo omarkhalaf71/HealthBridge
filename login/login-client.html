@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Login</title>
+  <link rel="stylesheet" href="style-login.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="client-page" data-role="user" id="login-form">
+  <div class="overlay"></div>
+
+  <section>
+    <form id="loginForm">
+      <h1>Client Login</h1>
+      <div class="inputbox">
+        <ion-icon name="person-outline"></ion-icon>
+        <input type="text" id="firstName" required>
+        <label>First Name</label>
+      </div>
+      <div class="inputbox">
+        <ion-icon name="person-outline"></ion-icon>
+        <input type="text" id="lastName" required>
+        <label>Last Name</label>
+      </div>
+      <div class="inputbox">
+        <ion-icon name="call-outline"></ion-icon>
+        <input type="tel" id="phone" required>
+        <label>Phone Number</label>
+      </div>
+      <div class="inputbox">
+        <ion-icon name="mail-outline"></ion-icon>
+        <input type="email" id="email" required>
+        <label>Email</label>
+      </div>
+      <div class="inputbox">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <input type="password" id="password" required>
+        <label>Password</label>
+      </div>
+      <button type="submit">Login</button>
+      <button type="button">Register</button>
+    </form>
+  </section>
+
+<script src="./login-unified.js"></script>
+
+</body>
+
+</html>
